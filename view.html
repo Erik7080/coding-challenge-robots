@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+  <title>Robot Station</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="logic/logic.js"></script>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <div class="introduction">
+    <h2>Welcome to the Red Badger Robot Station</h2>
+    <p>Please insert the correct commands in the dedicated area.</p>
+    <p>Failing to stick to the rules will make the robot
+      EXPLODE! Be extra careful!</p>
+  </div>
+  <div class="commands-area">
+    <div class="commands-left-column">
+      <div class="commands-row">
+        <label class="command-label">Command list:</label>
+      </div>
+      <div class="commands-row">
+        <textarea name="command-textarea" id="commandTextarea" placeholder="Enter the commands list" cols="30"
+          rows="10"></textarea>
+      </div>
+    </div>
+    <div class="commands-right-column">
+      <div class="commands-row">
+        <label class="command-label">Output result:</label>
+      </div>
+      <div class="commands-row">
+        <textarea name="command-output" id="outputTextarea"
+          placeholder="Here the result of your commands will be displayed" readonly disabled cols="30"
+          rows="10"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="commands-button">
+    <input id="submitButton" class="submit-button" type="button" value="Submit commands" onClick="executeCommands()">
+  </div>
+  <div id="errorMessage" class="error">
+    <p>It seems your command is invalid - Please try again!</p>
+  </div>
+</body>
+
+</html>
